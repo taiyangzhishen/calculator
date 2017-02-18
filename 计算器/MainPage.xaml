@@ -8,6 +8,84 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160*"></RowDefinition>
+            <RowDefinition Height="90*"></RowDefinition>
+            <RowDefinition Height="70*"></RowDefinition>
+            <RowDefinition Height="70*"></RowDefinition>
+            <RowDefinition Height="70*"></RowDefinition>
+            <RowDefinition Height="70*"></RowDefinition>
+            <RowDefinition Height="90*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="6">
+            <Border Margin="18,30,20,20" BorderBrush="#66ccff" BorderThickness="5"></Border>
+            <TextBlock x:Name="textBlock1" Margin="20,30,20,20" FontSize="30" Foreground="#66ccff" TextWrapping="Wrap" Text="0"/>
+            <TextBlock x:Name="error" Margin="300,80,20,20" FontSize="50" Foreground="Red" Text="E" Visibility="Collapsed"></TextBlock>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Button x:Name="c" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="c_Click" >C</Button>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
+            <TextBlock Text="计 算 器"  FontSize="40" Foreground="#66ccff" VerticalAlignment="Center" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="4">
+            <Button x:Name="ce" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="ce_Click">CE</Button>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Button x:Name="num1" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="num1_Click" >1</Button>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="2">
+            <Button x:Name="num2" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="num2_Click" >2</Button>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="3">
+            <Button x:Name="num3" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="num3_Click" >3</Button>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="4">
+            <Button x:Name="op1" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="op1_Click" >+</Button>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="1">
+            <Button x:Name="num4" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="num4_Click" >4</Button>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="2">
+            <Button x:Name="num5" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="num5_Click" >5</Button>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="3">
+            <Button x:Name="num6" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="num6_Click" >6</Button>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="4">
+            <Button x:Name="op2" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="op2_Click" >-</Button>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="1">
+            <Button x:Name="num7" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="num7_Click" >7</Button>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="2">
+            <Button x:Name="num8" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="num8_Click" >8</Button>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="3">
+            <Button x:Name="num9" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="num9_Click" >9</Button>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="4">
+            <Button x:Name="op3" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="op3_Click" >*</Button>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+            <Button x:Name="num0" Height="50" Width="152.5" Background="#66ccff" FontSize="30" Foreground="White" Click="num0_Click" >0</Button>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="3">
+            <Button x:Name="point" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="point_Click" >.</Button>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="4">
+            <Button x:Name="op4" Height="50" Width="70" Background="#66ccff" FontSize="30" Foreground="White" Click="op4_Click" >%</Button>
+        </Grid>
+        <Grid Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4">
+            <Button x:Name="op5" Height="50" Width="320" Background="#66ccff" FontSize="30" Foreground="White" Click="op5_Click" Content="=" />
+        </Grid>
     </Grid>
 </Page>

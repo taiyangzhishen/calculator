@@ -87,5 +87,16 @@
         <Grid Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4">
             <Button x:Name="op5" Height="50" Width="320" Background="#66ccff" FontSize="30" Foreground="White" Click="op5_Click" Content="=" />
         </Grid>
+        <Grid Grid.Row="0" Grid.Column="5">
+            <AppBarButton  Click="AppBarButton_Click" Height="40" Width="20">
+                <AppBarButton.Icon>
+                    <FontIcon FontFamily="Segoe UI Emoji" Glyph="&#x21BB;" Foreground="#66ccff"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="6">
+            <Grid x:Name="hisGround" Background="#66ccff" Visibility="Collapsed"></Grid>
+            <TextBlock x:Name="history" Foreground="White" FontSize="40" Visibility="Collapsed" TextWrapping="Wrap" Text="无历史记录"></TextBlock>
+        </Grid>
     </Grid>
 </Page>

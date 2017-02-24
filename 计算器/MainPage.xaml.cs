@@ -290,6 +290,14 @@ namespace 计算器
             double sum = 0;
             int i = 0;
             textBlock1.Text += "=";
+            if(history.Text == "无历史记录")
+            {
+                history.Text = textBlock1.Text;
+            }
+            else
+            {
+                history.Text += "\r\n" + textBlock1.Text;
+            }
             sum = result(textBlock1.Text); 
             for (i=0;i<textBlock1.Text.Length;i++)
             {
@@ -306,6 +314,7 @@ namespace 计算器
                 }
             }
             textBlock1.Text = sum.ToString();
+            history.Text += textBlock1.Text;
         }
 
         public double result(string str)
@@ -427,6 +436,20 @@ namespace 计算器
                 }
             } while (a == 1);
             return sum;
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(history.Visibility == Visibility.Collapsed)
+            {
+                history.Visibility = Visibility.Visible;
+                hisGround.Visibility = Visibility.Visible;
+            }
+            else if (history.Visibility == Visibility.Visible)
+            {
+                history.Visibility = Visibility.Collapsed;
+                hisGround.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

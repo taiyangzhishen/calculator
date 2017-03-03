@@ -289,6 +289,14 @@ namespace 计算器
             }
             double sum = 0;
             int i = 0;
+            if (textBlock1.Text.Substring(textBlock1.Text.Length - 1, 1) == "+" ||
+                textBlock1.Text.Substring(textBlock1.Text.Length - 1, 1) == "-" ||
+                textBlock1.Text.Substring(textBlock1.Text.Length - 1, 1) == "*" ||
+                textBlock1.Text.Substring(textBlock1.Text.Length - 1, 1) == "%" ||
+                textBlock1.Text.Substring(textBlock1.Text.Length - 1, 1) == ".")
+            {
+                textBlock1.Text = textBlock1.Text.Substring(0, textBlock1.Text.Length - 1);
+            }
             textBlock1.Text += "=";
             if(history.Text == "无历史记录")
             {
@@ -444,11 +452,13 @@ namespace 计算器
             {
                 history.Visibility = Visibility.Visible;
                 hisGround.Visibility = Visibility.Visible;
+                hisviewer.Visibility = Visibility.Visible;
             }
             else if (history.Visibility == Visibility.Visible)
             {
                 history.Visibility = Visibility.Collapsed;
                 hisGround.Visibility = Visibility.Collapsed;
+                hisviewer.Visibility = Visibility.Collapsed;
             }
         }
     }
